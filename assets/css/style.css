@@ -1,0 +1,78 @@
+* {
+    font-family: 'Poppins', sans-serif;
+}
+
+.swiper-button-prev::after,
+.text-orange-500swiper-button-next::after {
+    font-size: 20px !important;
+    color: #ff5722 !important;
+    font-weight: bold;
+}
+
+.swiper-pagination-bullet {
+    background: lightgray !important;
+    opacity: 1 !important;
+    width: 10px;
+    height: 10px;
+}
+
+.swiper-pagination-bullet-active {
+    background: #f97316 !important;
+}
+
+@keyframes wave {
+    0% {
+        transform: translateX(-100%) skewX(-20deg);
+        opacity: 0.5;
+    }
+    50% {
+        transform: translateX(100%) skewX(-20deg);
+        opacity: 0.2;
+    }
+    100% {
+        transform: translateX(100%) skewX(-20deg);
+        opacity: 0;
+    }
+}
+
+.wave-animation {
+    background: linear-gradient(
+            120deg,
+            rgba(255,255,255,0.3) 0%,
+            rgba(255,255,255,0.1) 50%,
+            rgba(255,255,255,0.3) 100%
+    );
+    animation: wave 2s infinite;
+}
+
+@keyframes pulseWave {
+    0% {
+        transform: scale(1);
+        opacity: 0.6;
+    }
+    50% {
+        transform: scale(1.1);
+        opacity: 0;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 0;
+    }
+}
+
+.pulse-animate {
+    animation: pulseWave 1.5s ease-in infinite;
+}
+
+.calendar-day {
+    transition: all 0.2s ease;
+}
+.calendar-day:hover:not(.disabled) {
+    transform: scale(1.05);
+}
+.time-slot {
+    transition: all 0.2s ease;
+}
+.time-slot:hover {
+    transform: translateX(5px);
+}
